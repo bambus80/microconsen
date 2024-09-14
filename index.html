@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micro Consen Repo</title>
+  </head>
+  <style>
+    :root {
+      font-family: "Poppins", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      background-color: #142c32;
+      color: #8eeaff;
+    }
+    a {
+      color: white;
+    }
+    hr {
+      color: #8eeaff;
+    }
+  </style>
+  <body>
+    <h1>Micro Consen Repo landing page</h1>
+    <hr />
+    <div>
+      <h1>Micro Consen</h1>
+      <span
+        >Go to the
+        <a href="https://github.com/bambus80/microconsen/tree/main">repo</a> to
+        access Micro Consen SB3's, we do not offer packaged HTML versions of the
+        Micro Consen kernel.</span
+      >
+    </div>
+    <div>
+      <h1>Bambus OS 5.2+</h1>
+      <span
+        >Go to the
+        <a href="https://github.com/bambus80/microconsen/tree/main/bambus_os"
+          >repo</a
+        >
+        to access Bambus OS SB3's.</span
+      >
+      <ul id="bambusos"></ul>
+    </div>
+  </body>
+  <script defer>
+    const releases = {
+      "Bambus OS 5.20": "https://youareanidiot.cc/safe/",
+    };
+    const list = document.getElementById("bambusos");
+    Object.keys(releases).forEach((key, index) => {
+      list.innerHTML += `<li><a href="${releases[key]}">${key}</a></li>`;
+    });
+  </script>
+</html>
