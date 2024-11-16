@@ -43,15 +43,33 @@
       >
       <ul id="bambusos"></ul>
     </div>
+    <div>
+      <h1>Bambus OS Enterprise</h1>
+      <span
+        >Go to the
+        <a href="https://github.com/bambus80/microconsen/tree/main/bambus_os"
+          >repo</a
+        >
+        to access Bambus OS Enterprise SB3's.</span
+      >
+      <ul id="bambusos-enterprise"></ul>
+    </div>
   </body>
   <script defer>
     const releases = {
       "Bambus OS 5.20 (rev. 1)": "https://bambus80.github.io/microconsen/bambus_os/release/html/5.20-r1.html",
       "Bambus OS 5.20": "https://bambus80.github.io/microconsen/bambus_os/release/html/5.20.html",
     };
-    const list = document.getElementById("bambusos");
+    const enterpriseReleases = {
+      "Bambus OS Enterprise 24.11 (v1.00)": "https://bambus80.github.io/microconsen/bambus_os/enterprise_24.11/bambus_os_enterprise_24.11_v1.00.html",
+    }
+    const list1 = document.getElementById("bambusos");
+    const list2 = document.getElementById("bambusos-enterprise");
     Object.keys(releases).forEach((key, index) => {
-      list.innerHTML += `<li><a href="${releases[key]}">${key}</a></li>`;
+      list1.innerHTML += `<li><a href="${releases[key]}">${key}</a></li>`;
+    });
+    Object.keys(enterpriseReleases).forEach((key, index) => {
+      list2.innerHTML += `<li><a href="${enterpriseReleases[key]}">${key}</a></li>`;
     });
   </script>
 </html>
